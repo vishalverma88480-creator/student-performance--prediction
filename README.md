@@ -35,7 +35,7 @@ Evaluated on an 80/20 stratified train-test split (835 training / 209 test recor
 
 ```bash
 # Clone the repository
-git clone [https://github.com/vishalverma88480-creator/student-performance--prediction.git](https://github.com/vishalverma88480-creator/student-performance--prediction.git)
+git clone https://github.com/vishalverma88480-creator/student-performance--prediction.git
 cd student-performance--prediction
 
 # Create virtual environment and install dependencies
