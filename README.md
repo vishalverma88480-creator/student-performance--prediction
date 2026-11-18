@@ -4,7 +4,7 @@ A local web application that estimates a student's final course grade from the [
 
 The score is produced by a scikit-learn model that was trained on the real dataset. Metrics in this README come from that training run (`models/training_report.json`). They are not typed in by hand.
 
-##Live App: [https://student-performance-vishal.streamlit.app](https://student-performance-vishal.streamlit.app)
+## Live App: [https://student-performance-vishal.streamlit.app](https://student-performance-vishal.streamlit.app)
 
 ## Features
 
