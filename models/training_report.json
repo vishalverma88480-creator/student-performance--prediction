@@ -1,0 +1,373 @@
+{
+  "trained_at": "2026-11-17T09:34:56+00:00",
+  "selection_rule": "Lowest mean cross-validated RMSE on the training set. The test set is scored only after the model is chosen.",
+  "dataset": {
+    "rows": 1044,
+    "math_rows": 395,
+    "portuguese_rows": 649,
+    "schools": [
+      "GP",
+      "MS"
+    ],
+    "missing_cells": 0,
+    "target_mean": 11.341954022988507,
+    "target_min": 0,
+    "target_max": 20,
+    "zero_grades": 53,
+    "pass_rate": 0.7796934865900383,
+    "age_min": 15,
+    "age_max": 22,
+    "absence_max": 75,
+    "source_url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+    "citation": "P. Cortez and A. Silva. Using Data Mining to Predict Secondary School Student Performance. In A. Brito and J. Teixeira (Eds.), Proceedings of the 5th Future Business Technology Conference (FUBUTEC 2008), pp. 5-12, Porto, Portugal, April 2008.",
+    "overlap_note": "The dataset authors report that 382 students appear in both course files. This app keeps both rows. Each prediction is a course grade, identified by the course field, not a single combined GPA.",
+    "input_features_with_priors": 17,
+    "input_features_without_priors": 15
+  },
+  "library_versions": {
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5"
+  },
+  "random_state": 42,
+  "test_size_fraction": 0.2,
+  "cv_folds": 5,
+  "with_priors": {
+    "algorithm": "Gradient Boosting",
+    "features": [
+      "sex",
+      "age",
+      "address",
+      "famsize",
+      "Medu",
+      "Fedu",
+      "studytime",
+      "failures",
+      "schoolsup",
+      "famsup",
+      "activities",
+      "higher",
+      "internet",
+      "absences",
+      "subject",
+      "G1",
+      "G2"
+    ],
+    "best_params": {
+      "learning_rate": 0.05,
+      "max_depth": 2
+    },
+    "train_size": 835,
+    "test_size": 209,
+    "encoded_feature_count": 26,
+    "test_metrics": {
+      "mae": 0.8120801749830924,
+      "mse": 2.0607808999513537,
+      "rmse": 1.4355420230530884,
+      "r2": 0.8446016674709459
+    },
+    "cv_metrics": {
+      "mae": 0.917400714324301,
+      "mse": 2.089446355742342,
+      "rmse": 1.435276456328135,
+      "r2": 0.861254032267804
+    },
+    "mean_residual": 0.04370682681593691,
+    "feature_importance": [
+      {
+        "feature": "G2",
+        "importance": 0.8753600456200397
+      },
+      {
+        "feature": "absences",
+        "importance": 0.06303848347811057
+      },
+      {
+        "feature": "G1",
+        "importance": 0.04755155982491606
+      },
+      {
+        "feature": "subject",
+        "importance": 0.007394511182842602
+      },
+      {
+        "feature": "failures",
+        "importance": 0.002189348150645242
+      },
+      {
+        "feature": "schoolsup",
+        "importance": 0.001262034674481602
+      },
+      {
+        "feature": "sex",
+        "importance": 0.0010196178054079363
+      },
+      {
+        "feature": "age",
+        "importance": 0.001014768184709276
+      },
+      {
+        "feature": "Fedu",
+        "importance": 0.0004414345544831808
+      },
+      {
+        "feature": "activities",
+        "importance": 0.0003877122133843249
+      },
+      {
+        "feature": "Medu",
+        "importance": 0.00012959047791122468
+      },
+      {
+        "feature": "studytime",
+        "importance": 0.00010402374785080341
+      },
+      {
+        "feature": "address",
+        "importance": 9.30338542997683e-05
+      },
+      {
+        "feature": "famsup",
+        "importance": 1.3836230917816357e-05
+      },
+      {
+        "feature": "famsize",
+        "importance": 0.0
+      },
+      {
+        "feature": "higher",
+        "importance": 0.0
+      },
+      {
+        "feature": "internet",
+        "importance": 0.0
+      }
+    ],
+    "candidates": [
+      {
+        "algorithm": "Linear Regression",
+        "selected": false,
+        "params": {},
+        "cv_mae": 0.9824103318894334,
+        "cv_mse": 2.5185614004581907,
+        "cv_rmse": 1.572236481334849,
+        "cv_r2": 0.8349956385614774,
+        "test_mae": 0.8924289021782531,
+        "test_mse": 2.3191290437425387,
+        "test_rmse": 1.5228686889362912,
+        "test_r2": 0.8251202802171752
+      },
+      {
+        "algorithm": "Ridge Regression",
+        "selected": false,
+        "params": {
+          "alpha": 10.0
+        },
+        "cv_mae": 0.9756224853994407,
+        "cv_mse": 2.5117702231313443,
+        "cv_rmse": 1.5697544577395433,
+        "cv_r2": 0.8353565344426152,
+        "test_mae": 0.8946846560567484,
+        "test_mse": 2.3299998147090575,
+        "test_rmse": 1.5264336915533074,
+        "test_r2": 0.8243005425723133
+      },
+      {
+        "algorithm": "Random Forest",
+        "selected": false,
+        "params": {
+          "max_depth": 8,
+          "min_samples_leaf": 4
+        },
+        "cv_mae": 0.9057184890785456,
+        "cv_mse": 2.1543713981601402,
+        "cv_rmse": 1.458344176090439,
+        "cv_r2": 0.8570845461512191,
+        "test_mae": 0.8437628207611644,
+        "test_mse": 2.0817724685017787,
+        "test_rmse": 1.4428348722226596,
+        "test_r2": 0.8430187457979129
+      },
+      {
+        "algorithm": "Gradient Boosting",
+        "selected": true,
+        "params": {
+          "learning_rate": 0.05,
+          "max_depth": 2
+        },
+        "cv_mae": 0.917400714324301,
+        "cv_mse": 2.089446355742342,
+        "cv_rmse": 1.435276456328135,
+        "cv_r2": 0.861254032267804,
+        "test_mae": 0.8120801749830924,
+        "test_mse": 2.0607808999513537,
+        "test_rmse": 1.4355420230530884,
+        "test_r2": 0.8446016674709459
+      }
+    ]
+  },
+  "without_priors": {
+    "algorithm": "Random Forest",
+    "features": [
+      "sex",
+      "age",
+      "address",
+      "famsize",
+      "Medu",
+      "Fedu",
+      "studytime",
+      "failures",
+      "schoolsup",
+      "famsup",
+      "activities",
+      "higher",
+      "internet",
+      "absences",
+      "subject"
+    ],
+    "best_params": {
+      "max_depth": 16,
+      "min_samples_leaf": 4
+    },
+    "train_size": 835,
+    "test_size": 209,
+    "encoded_feature_count": 24,
+    "test_metrics": {
+      "mae": 2.263793405511412,
+      "mse": 9.71569492973206,
+      "rmse": 3.1170009511920362,
+      "r2": 0.26736374959754927
+    },
+    "cv_metrics": {
+      "mae": 2.3701201532614933,
+      "mse": 10.580771225358816,
+      "rmse": 3.2456879325894037,
+      "r2": 0.30281891753214935
+    },
+    "mean_residual": -0.04535987295711615,
+    "feature_importance": [
+      {
+        "feature": "failures",
+        "importance": 0.24718154868806078
+      },
+      {
+        "feature": "absences",
+        "importance": 0.19387810777968162
+      },
+      {
+        "feature": "subject",
+        "importance": 0.0802214844099596
+      },
+      {
+        "feature": "age",
+        "importance": 0.07293448216605083
+      },
+      {
+        "feature": "studytime",
+        "importance": 0.06230536957495945
+      },
+      {
+        "feature": "Medu",
+        "importance": 0.06109092591474723
+      },
+      {
+        "feature": "Fedu",
+        "importance": 0.05767193867738251
+      },
+      {
+        "feature": "sex",
+        "importance": 0.0415827637368541
+      },
+      {
+        "feature": "activities",
+        "importance": 0.0357896021325777
+      },
+      {
+        "feature": "schoolsup",
+        "importance": 0.034515663038984463
+      },
+      {
+        "feature": "famsup",
+        "importance": 0.02946417151602942
+      },
+      {
+        "feature": "higher",
+        "importance": 0.025340165798248687
+      },
+      {
+        "feature": "address",
+        "importance": 0.022569138241229705
+      },
+      {
+        "feature": "famsize",
+        "importance": 0.019868676426172387
+      },
+      {
+        "feature": "internet",
+        "importance": 0.015585961899061546
+      }
+    ],
+    "candidates": [
+      {
+        "algorithm": "Linear Regression",
+        "selected": false,
+        "params": {},
+        "cv_mae": 2.525421048415004,
+        "cv_mse": 12.081754976570327,
+        "cv_rmse": 3.4664921499896026,
+        "cv_r2": 0.20749818125226382,
+        "test_mae": 2.3985786440137042,
+        "test_mse": 10.779624900410969,
+        "test_rmse": 3.2832339088787093,
+        "test_r2": 0.18713545197741366
+      },
+      {
+        "algorithm": "Ridge Regression",
+        "selected": false,
+        "params": {
+          "alpha": 50.0
+        },
+        "cv_mae": 2.506994799621139,
+        "cv_mse": 12.041848588114632,
+        "cv_rmse": 3.4608224535660534,
+        "cv_r2": 0.21024016843179227,
+        "test_mae": 2.3767753053285188,
+        "test_mse": 10.726678082386783,
+        "test_rmse": 3.27516077199071,
+        "test_r2": 0.1911280390757666
+      },
+      {
+        "algorithm": "Random Forest",
+        "selected": true,
+        "params": {
+          "max_depth": 16,
+          "min_samples_leaf": 4
+        },
+        "cv_mae": 2.3701201532614933,
+        "cv_mse": 10.580771225358816,
+        "cv_rmse": 3.2456879325894037,
+        "cv_r2": 0.30281891753214935,
+        "test_mae": 2.263793405511412,
+        "test_mse": 9.71569492973206,
+        "test_rmse": 3.1170009511920362,
+        "test_r2": 0.26736374959754927
+      },
+      {
+        "algorithm": "Gradient Boosting",
+        "selected": false,
+        "params": {
+          "learning_rate": 0.05,
+          "max_depth": 3
+        },
+        "cv_mae": 2.3942636769283667,
+        "cv_mse": 10.642695272967634,
+        "cv_rmse": 3.2565092135947227,
+        "cv_r2": 0.2982184193977305,
+        "test_mae": 2.2947178577005625,
+        "test_mse": 9.66576062625752,
+        "test_rmse": 3.108980641023279,
+        "test_r2": 0.27112917050965424
+      }
+    ]
+  }
+}
